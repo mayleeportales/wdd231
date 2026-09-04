@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Salvador Chamber of Commerce</title>
+    <meta name="description" content="Salvador Chamber of Commerce connects local businesses and promotes economic development. Find our business directory, events and opportunities to grow.">
+    <meta name="author" content="Maylee Portales Picazo">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet">
+
+    <!-- CSS links-->
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/base.css">
+    <link rel="stylesheet" href="styles/larger.css">
+
+    <!--JS links-->
+    <script src="scripts/navigation.js" defer></script>
+    <script src="scripts/date.js" defer></script>
+</head>
+<body>
+    <header>
+        <img src="images/salvador-chamber.svg" alt="Salvador Chamber of Commerce" width="120" height="125">
+        <span class="site-name">Salvador Chamber of Commerce</span>
+        <button id="ham-btn" class="hamburger"></button>
+    </header>
+
+    <nav id="nav-bar" class="navigation">
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Chamber</a></li>
+            <li><a href="#">Final</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <h1>Home</h1>
+
+        <section>
+            <h2>About Me</h2>
+            <p>I am a BYU-Idaho student through BYU Pathway Connect, majoring in Software Development. As part of my coursework, I dedicate my studies to becoming a Web Frontend Developer in order to develop solutions aligned with people's needs. My long-term goal is to become a full-stack developer, also with knowledge of computer networks and databases. I really appreciate understanding the reasoning behind things, and I am aware that it's an important trait of becoming a Software Developer.</p>
+        </section>
+
+        <section>
+            <h2>Student Photo</h2>
+            <img src="images/maylee_banco.webp" alt="Maylee sitting on a brown bench with her crossed legs" width="400" height="400">
+        </section>
+
+        <section>
+            <h2>Web Certificate Courses</h2>
+
+            <div class
+            ="btn-container">
+              <button class="all-btn">All</button>
+              <button class="cse-btn">CSE</button>
+              <button class="wdd-btn">WDD</button>
+            </div>
+
+            <div id="cards"></div>
+
+            <p id="total-credits"></p>
+        </section>
+    </main>
+
+    <footer>
+        <div class="social">
+            <a href="https://www.facebook.com/" target="_blank"><img src="images/facebook.svg" alt="Facebook" width="16" height="16"></a>
+            <a href="https://www.linkedin.com/in/mayleepicazo" target="_blank"><img src="images/linkedin.svg" alt="LinkedIn" width="16" height="16"></a>
+            <a href="https://github.com/mayleeportales" target="_blank"><img src="images/github.svg" alt="GitHub" width="16" height="16"></a>        
+        </div>
+        <p>&copy;<span id="currentYear"></span> 💠 Maylee Picazo 💠 Salvador, BA</p>
+        <p id="lastModified"></p>
+    </footer>    
+</body>
+</html>
