@@ -1,12 +1,22 @@
 @media only screen and (min-width: 38rem) {
      
-    header, main, nav, footer {
+    header, main, nav{
         max-width: 900px;
         margin: 0 auto;
     }
-    
+
     header {
         grid-template-columns: 120px auto;
+    }
+
+    main {
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        gap: 1rem;
+    }
+
+    h1 {
+        grid-column: 1 / -1;
     }
     
     .hamburger {
@@ -24,5 +34,14 @@
 
     .navigation a {
         border: none;
+    }
+
+    .courses {
+        grid-column: 1 / -1;
+    }
+
+    .footer-content {
+        max-width: 900px;
+        margin: 0 auto;
     }
 }

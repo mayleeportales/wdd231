@@ -3,11 +3,21 @@
     --color-accent: #F4B400;
     --color-secondary: #006CB3;
     --color-text: #0B2545;
-    --background: #f6f4f0;
+    --background: #dfd5c1;
     --color-text-footer: #fff;
+    --color-card: #e3cb89;
+    --color-current: #e3cb89;
+
+    --color-text-current: #fff;
+    --color-text-completed-card: #fff;
+    --color-text-h2: #fff;
+
+    --btn-hover: #ad9248;
 
     --heading-font: "Playfair Display", Georgia, serif;
     --text-font: "Source Sans 3", sans-serif;
+
+    --space: 1rem;
 }
 
 * {
@@ -25,7 +35,7 @@ header
 {
     display: grid;
     grid-template-columns: 100px auto 44px;
-    padding: 5px 0 5px 10px;
+    padding: 5px var(--space);
     align-items: center;
     border-bottom: solid 1px var(--color-primary);
     column-gap: 8px;
@@ -43,6 +53,90 @@ header span
 {
     font-size: 1.2rem;
     color: var(--color-primary);
+}
+
+/* ======= MAIN =======*/
+main {
+    padding: 5px var(--space);
+    align-items: start;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+button {
+    color: var(--color-primary);
+    background-color: var(--color-accent);
+    border-color: var(--color-primary);
+    border-width: 1.5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: var(--btn-hover);
+}
+
+.btn-container {
+    display: flex;
+    gap: 12px;
+}
+
+.all-btn {
+    flex: 1;
+    border-radius: 5px;
+}
+
+.cse-btn {
+    flex: 1;
+    border-radius: 5px;
+}
+
+.wdd-btn {
+    flex: 1;
+    border-radius: 5px;
+    padding: 5px;
+}
+
+#cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: .5rem;
+}
+
+.card {
+    background-color: var(--color-card);
+    padding: 5px;
+    text-align: center;
+    border-radius: 5px;
+    border: 1px solid var(--color-primary);
+}
+
+.card.completed {
+    background-color: var(--color-primary);
+    padding: 5px;
+    text-align: center;
+    color: var(--color-text-completed-card);
+    border-radius: 5px;
+    border: 1px solid var(--color-text-completed-card);
+}
+
+.check {
+    color: var(--color-text-completed-card);
+    opacity: .8;
+}
+
+#total-credits {
+    text-align: center;
+}
+
+section h2 {
+    background-color: var(--color-primary);
+    text-align: center;
+    color: var(--color-text-h2);
+    padding: 5px;
+    border-radius: 5px;
 }
 
 /* ======= HAMBURGER =======*/
@@ -88,7 +182,15 @@ header span
 }
 
 .navigation li.current {
-    background-color: #eee;
+    background-color: var(--color-primary);
+}
+
+.navigation li.current a {
+    color: var(--color-text-current);
+}
+
+.navigation li.current a:hover {
+    color: var(--color-text);
 }
 
 .navigation a:hover {
@@ -104,7 +206,7 @@ h1 {
 footer {
     background-color: var(--color-primary);
     color: var(--color-text-footer);
-    padding: 1rem 10px;
+    padding: 1.5rem var(--space);
     text-align: center;
 }
 

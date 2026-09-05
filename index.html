@@ -20,6 +20,7 @@
     <!--JS links-->
     <script src="scripts/navigation.js" defer></script>
     <script src="scripts/date.js" defer></script>
+    <script src="scripts/course.js" defer></script>
 </head>
 <body>
     <header>
@@ -30,26 +31,26 @@
 
     <nav id="nav-bar" class="navigation">
         <ul>
-            <li><a href="#">Home</a></li>
-            <li><a href="#">Chamber</a></li>
-            <li><a href="#">Final</a></li>
+            <li class="current"><a href="#">Home</a></li>
+            <li><a href="#">Chamber Project</a></li>
+            <li><a href="#">Final Project</a></li>
         </ul>
     </nav>
 
     <main>
         <h1>Home</h1>
 
-        <section>
+        <section class="about">
             <h2>About Me</h2>
             <p>I am a BYU-Idaho student through BYU Pathway Connect, majoring in Software Development. As part of my coursework, I dedicate my studies to becoming a Web Frontend Developer in order to develop solutions aligned with people's needs. My long-term goal is to become a full-stack developer, also with knowledge of computer networks and databases. I really appreciate understanding the reasoning behind things, and I am aware that it's an important trait of becoming a Software Developer.</p>
         </section>
 
-        <section>
+        <section class="student-photo">
             <h2>Student Photo</h2>
             <img src="images/maylee_banco.webp" alt="Maylee sitting on a brown bench with her crossed legs" width="400" height="400">
         </section>
 
-        <section>
+        <section class="courses">
             <h2>Web Certificate Courses</h2>
 
             <div class
@@ -64,15 +65,17 @@
             <p id="total-credits"></p>
         </section>
     </main>
-
-    <footer>
-        <div class="social">
+    
+      <footer>
+        <div class="footer-content">
+          <div class="social">
             <a href="https://www.facebook.com/" target="_blank"><img src="images/facebook.svg" alt="Facebook" width="16" height="16"></a>
             <a href="https://www.linkedin.com/in/mayleepicazo" target="_blank"><img src="images/linkedin.svg" alt="LinkedIn" width="16" height="16"></a>
             <a href="https://github.com/mayleeportales" target="_blank"><img src="images/github.svg" alt="GitHub" width="16" height="16"></a>        
+          </div>
+          <p>&copy;<span id="currentYear"></span> 💠 Maylee Picazo 💠 Salvador, BA</p>
+          <p id="lastModified"></p>
         </div>
-        <p>&copy;<span id="currentYear"></span> 💠 Maylee Picazo 💠 Salvador, BA</p>
-        <p id="lastModified"></p>
-    </footer>    
+      </footer>    
 </body>
 </html>
