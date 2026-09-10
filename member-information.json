@@ -1,0 +1,18 @@
+{
+    "family_name": "Picazo",
+    "date_move": "07-06-2025",
+    "number_people": 2,
+    "visited_bishopric": false,
+    "individual_member_data": [
+        {
+            "name": "Joan Picazo",
+            "gender": "male",
+            "birth_date": "01-30"
+        },
+        {
+            "name": "Maylee Picazo",
+            "gender": "female",
+            "birth_date": "02-27"
+        }
+    ]
+}
