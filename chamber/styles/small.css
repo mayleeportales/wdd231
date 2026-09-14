@@ -1,0 +1,267 @@
+:root {
+    --color-primary: #0B2545;
+    --color-accent: #F4B400;
+    --color-secondary: #006CB3;
+    --color-text: #0B2545;
+    --background: #dfd5c1;
+    --color-text-footer: #fff;
+    --color-card: #d1bc84;
+    --color-current: #e3cb89;
+
+    --color-text-current: #fff;
+    --color-text-btn: #fff;
+    --color-text-h2: #fff;
+
+    --btn-hover: #235577;
+
+    --heading-font: "Playfair Display", Georgia, serif;
+    --text-font: "Source Sans 3", sans-serif;
+
+    --space: 1rem;
+}
+
+* {
+    box-sizing: border-box;    
+}
+
+body {    
+    color: var(--color-text);
+    background-color: var(--background);
+    font-family: var(--text-font);
+}
+
+/* ======= HEADER =======*/
+header 
+{
+    display: grid;
+    grid-template-columns: 100px auto 44px;
+    padding: 5px var(--space);
+    align-items: center;
+    border-bottom: solid 1px var(--color-primary);
+    column-gap: 8px;
+}
+
+header img
+{
+    display: block;
+    width: 100%;
+    height: auto;
+    padding-bottom: 5px;
+}
+
+header span 
+{
+    font-size: 1.2rem;
+    color: var(--color-primary);
+}
+
+/* ======= HAMBURGER =======*/
+.hamburger {
+    background: none;
+    border: none;
+    color: var(--color-primary);
+    cursor: pointer;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.hamburger::before {
+    content: "\2630";
+    font-size: 2rem;
+}
+
+.hamburger.show::before {
+    content: "\00D7";
+    font-size: 2rem;
+}
+
+/* ======= NAVIGATION =======*/
+.navigation {
+    display: none;
+}
+
+.navigation.show {
+    display: block;
+}
+
+.navigation ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.navigation a {
+    display: block;
+    padding: .8rem 10px;
+    color: var(--color-text);
+    text-decoration: none;
+    border-bottom: 1.5px solid var(--color-primary);
+}
+
+.navigation li.current {
+    background-color: var(--color-primary);
+}
+
+.navigation li.current a {
+    color: var(--color-text-current);
+}
+
+.navigation li.current a:hover {
+    color: var(--color-text);
+}
+
+.navigation a:hover {
+    background-color: var(--color-accent);
+}
+
+h1 {
+    margin-left: 10px;
+}
+
+/* ====== MAIN ======== */
+main {
+    padding-bottom: 3rem;
+}
+
+#cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 8px;
+}
+
+.card {
+    background-color: var(--color-card);
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid var(--color-primary);
+}
+
+.card img {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+}
+
+.card-header {
+    border-bottom: 1px solid var(--color-primary);
+}
+
+.card-header h2 {
+    margin-bottom: 5px;
+}
+
+.card-header p {
+    margin-top: 5px;
+    text-align: center;
+}
+
+.card-body {
+    display: grid;
+    grid-template-columns: 90px 1fr;
+    gap: 8px;
+    margin-top: 20px;
+}
+
+#cards.list {
+    grid-template-columns: 1fr;
+}
+
+.view-toggle {
+    display: flex;
+    justify-content: center;
+    gap: .8rem;
+    margin-bottom: 30px;
+}
+
+.card-info p {
+    margin: 0;
+}
+
+#cards.list .card-info  {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr 1fr;
+    align-items: center;
+    gap: 1rem;
+}
+
+#cards.list .card-body {
+    grid-template-columns: 120px 1fr;
+    gap: 1.5rem;
+}
+
+.list-btn, .grid-btn {
+    padding: 10px;
+    background-color: var(--color-primary);
+    color: var(--color-text-btn);
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.list-btn:hover, .grid-btn:hover {
+    background-color: var(--btn-hover);
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    
+    border-radius: 5px;
+}
+
+h2 {
+    text-align: center;
+}
+
+
+/* ====== FOOTER ======== */
+footer {
+    background-color: var(--color-primary);
+    color: var(--color-text-footer);
+    padding: 1.5rem var(--space);
+    text-align: center;
+}
+
+address {
+    font-style: normal;
+}
+
+.footer-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+}
+
+.footer-content p, .footer-content address,
+address p {
+    margin: 0;
+}
+
+.social {
+    display: flex;
+    justify-content: center;
+    column-gap: 8px;
+}
+
+.social a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 44px;
+    height: 44px;
+    border: #ccc solid 1px;
+    border-radius: 22px;
+}
+
+.social img {
+    width: 26px;
+    height: 26px;
+
+}
+
+.social a:hover {
+    background-color: var(--color-secondary);
+}
+
+#lastModified {
+    color: var(--color-accent);
+}

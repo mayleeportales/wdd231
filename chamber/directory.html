@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Directory | Salvador Chamber of Commerce</title>
+    <meta name="description" content="Browse the Salvador Chamber of Commerce Directory: member companies, membership levels, phone numbers and websites.">
+    <meta name="author" content="Maylee Portales Picazo">
+
+    <meta property="og:title" content="Directory | Salvador Chamber of Commerce">
+    <meta property="og:description" content="Browse the Salvador Chamber of Commerce Directory: member companies, membership levels, phone numbers and websites.">
+    <meta property="og:image" content="https://mayleeportales.github.io/wdd231/chamber/images/chamber-og.jpg">
+    <meta property="og:url" content="https://mayleeportales.github.io/wdd231/chamber/directory.html">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet">
+
+    <!-- Favicon Link-->
+    <link rel="icon" href="chamber/favicon.ico">
+
+    <!-- CSS links-->
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/small.css">
+    <link rel="stylesheet" href="styles/larger.css">
+
+    <!--JS links-->
+    <script src="scripts/navigation.js" defer></script>
+    <script src="scripts/date.js" defer></script>
+    <script src="scripts/members.js" defer></script>
+</head>
+<body>
+    <header>
+        <img src="images/salvador-chamber.svg" alt="Salvador Chamber of Commerce" width="120" height="125">
+        <span class="site-name">Salvador Chamber of Commerce</span>
+        <button id="ham-btn" class="hamburger" aria-label="Menu"></button>
+    </header>
+
+    <nav id="nav-bar" class="navigation">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="discover.html">Discover</a></li>
+            <li class="current"><a href="directory.html">Directory</a></li>
+            <li><a href="join.html">Join</a></li>
+
+        </ul>
+    </nav>
+
+    <main>
+        <h1>Directory</h1>
+
+        <div class="view-toggle">
+            <button class="grid-btn">Grid</button>
+            <button class="list-btn">List</button>
+        </div>
+
+        <div id="cards" class="grid"></div>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+          <div class="social">
+            <a href="https://www.facebook.com/" target="_blank"><img src="images/facebook.svg" alt="Facebook login page" width="16" height="16"></a>
+            <a href="https://www.linkedin.com/in/mayleepicazo" target="_blank"><img src="images/linkedin.svg" alt="Maylee Picazo's LinkedIn profile" width="16" height="16"></a>
+            <a href="https://github.com/mayleeportales" target="_blank"><img src="images/github.svg" alt="Maylee Picazo's GitHub profile" width="16" height="16"></a>        
+          </div>
+          <p>&copy;<span id="currentYear"></span> 💠 Maylee Picazo | WDD 231💠 Salvador, BA</p>
+          <address>
+            <p>465 Cabin Street, Salvador - BA, 40305-224</p>
+            <p>+55(71)99130-4422</p>
+            <p>ssachamberofcommerce@gmail.com</p>            
+          </address>
+          <p id="lastModified"></p>
+        </div>
+    </footer>    
+</body>
+</html>

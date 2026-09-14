@@ -1,0 +1,68 @@
+{
+    "companies": [
+        {
+            "name": "Le Biscuit",
+            "address": "Rodovia BA-535, Camaçari – BA",
+            "phoneNumber": "(71) 3276-8000",
+            "url": "https://lebiscuit.com.br",
+            "image": "le-biscuit.webp",
+            "membershipLevel": 1,
+            "tagline": "Home goods retailer"
+        },
+        {
+            "name": "Hiperideal",
+            "address": "Rua d'Ajuda, Salvador – BA",
+            "phoneNumber": "(71) 3444-1800",
+            "url": "https://hiperideal.com.br",
+            "image": "hiperideal.webp",
+            "membershipLevel": 2,
+            "tagline": "Supermarket chain"
+        },
+        {
+            "name": "Hospital da Bahia",
+            "address": "Av. Magalhães Neto, Salvador – BA",
+            "phoneNumber": "(71) 2109-1000",
+            "url": "https://www.hospitaldabahia.com.br/",
+            "image": "hospital-da-bahia.webp",
+            "membershipLevel": 3,
+            "tagline": "Private hospital"
+        },
+        {
+            "name": "JHSF (Fasano Salvador)",
+            "address": "Praça Castro Alves, Salvador – BA",
+            "phoneNumber": "(71) 2201-6300",
+            "url": "https://jhsf.com.br/",
+            "image": "fasano-salvador.webp",
+            "membershipLevel": 3,
+            "tagline": "Luxury hotel"
+        },
+        {
+            "name": "Moura Dubeux",
+            "address": "Av. Tancredo Neves - Salvador – BA",
+            "phoneNumber": "(71) 3273-8200", 
+            "url": "https://mouradubeux.com.br",
+            "image": "moura-dubeux.webp",
+            "membershipLevel": 2,
+            "tagline": "Real estate developer"
+        },
+        {
+            "name": "Rede Bahia",
+            "address": "Rua Aristídes Novis, Salvador – BA", 
+            "phoneNumber": "(71) 3203-1210",
+            "url": "https://redebahia.com.br/",
+            "image": "rede-bahia.webp",
+            "membershipLevel": 1,
+            "tagline": "Media group"
+        },
+        {
+            "name": "Unifacs (Universidade Salvador)",
+            "address": "Av. Tancredo Neves, Salvador – BA",
+            "phoneNumber": "(71) 3273-9500",
+            "url": "https://unifacs.br",
+            "image": "unifacs.webp",
+            "membershipLevel": 2,
+            "tagline": "Private university"
+        }
+
+    ]
+}
