@@ -21,15 +21,20 @@ async function getWeatherData() {
 }
 
 function displayWeather(data) {
-    const icon = document.querySelector('#weather-icon');
+    const iconBox = document.querySelector('#weather-icon-box');
+    const icon = document.createElement('img');
+
     const temp = document.querySelector('#current-temp');
     const desc = document.querySelector('#weather-desc');
 
     temp.textContent = `${Math.round(data.main.temp)}°C`;
     desc.textContent = `${data.weather[0].description}`;
 
+    
+
     icon.src = `https://openweathermap.org/img/wn/${data.weather[0].icon}@2x.png`;
     icon.alt = `${data.weather[0].description}`;
+    iconBox.appendChild(icon);
 }
 
 async function getForecastData() {
