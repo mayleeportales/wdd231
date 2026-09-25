@@ -26,6 +26,27 @@
         border: none;
     }
 
+    .hero {
+        aspect-ratio: 21 / 9;
+    }
+
+    .hero-title {
+        font-size: 1.6rem;
+    }
+
+    .cta-btn {
+        font-size: 1.25rem;
+        padding: 1rem 2rem;
+    }
+
+    #spotlights {
+    grid-template-columns: 1fr 1fr 1fr;
+    }
+
+    .weather-panel {
+        grid-template-columns: 1fr 2fr;
+    }
+
     #cards.list .card-info  {
     display: grid;
     grid-template-columns: 1.5fr 1fr 1fr;

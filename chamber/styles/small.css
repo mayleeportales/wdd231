@@ -5,12 +5,14 @@
     --color-text: #0B2545;
     --background: #dfd5c1;
     --color-text-footer: #fff;
-    --color-card: #d1bc84;
+    --color-card: #FDFBF7;
+    --color-card-header: #0B2545;
     --color-current: #e3cb89;
+    --color-heading-transparency: rgba(11, 37, 69, 0.8);
 
     --color-text-current: #fff;
     --color-text-btn: #fff;
-    --color-text-h2: #fff;
+    --color-text-heading: #fff;
 
     --btn-hover: #235577;
 
@@ -30,6 +32,7 @@ body {
     font-family: var(--text-font);
 }
 
+/************* DIRECTORY PAGE **************/
 /* ======= HEADER =======*/
 header 
 {
@@ -119,14 +122,21 @@ h1 {
 
 /* ====== MAIN ======== */
 main {
+    display: grid;
+    gap: 4.5rem;
     padding: 0 var(--space) 3rem;
 }
 
-#cards {
+#cards, #spotlights{
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-    gap: 8px;
+    gap: 25px;
 }
+
+#cards {
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+}
+
+
 
 .card {
     background-color: var(--color-card);
@@ -141,15 +151,14 @@ main {
     object-fit: cover;
 }
 
-.card-header {
-    border-bottom: 1px solid var(--color-primary);
-}
-
 .card-header h2 {
     margin-bottom: 5px;
 }
 
 .card-header p {
+    background-color: var(--color-card-header);
+    color: var(--color-text-heading);
+    border-radius: 5px;
     margin-top: 5px;
     text-align: center;
 }
@@ -158,7 +167,11 @@ main {
     display: grid;
     grid-template-columns: 90px 1fr;
     gap: 8px;
-    margin-top: 20px;
+    margin-top: 20px;   
+}
+
+.badge {
+    text-align: center;
 }
 
 #cards.list {
@@ -174,6 +187,10 @@ main {
 
 .card-info p {
     margin: 0;
+}
+
+.card-info a {
+    color: var(--color-secondary);
 }
 
 #cards.list .card-body {
@@ -257,4 +274,131 @@ address p {
 
 #lastModified {
     color: var(--color-accent);
+}
+
+/************* HOME PAGE **************/
+.hero {
+    position: relative;
+    width: 100%;
+    margin-top: 30px;
+    overflow: hidden;
+    aspect-ratio: 16 / 9;
+}
+
+.hero-image {
+    display: block;
+    width: 100%;
+    height: 100%;
+    max-width: 100%;        
+    object-fit: cover;
+    object-position: center;
+}
+
+.hero-title {
+    position: absolute;
+    background-color: var(--color-heading-transparency);
+    color: var(--color-text-heading);
+    margin: 0;
+    padding: 10px;
+    left: 0;
+    top: 1.25rem;
+    right: 0;
+    font-size: 1.3rem;
+    text-align: center;
+
+}
+
+.cta-btn {
+    position: absolute;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    text-decoration: none;
+    font-size: 1rem;
+    padding: 0.8rem 1.5rem;
+    background-color: var(--color-primary);
+    color: var(--color-text-btn);
+    cursor: pointer;
+    border-radius: 5px;
+    white-space: nowrap;
+}
+
+.cta-btn:hover {
+    background-color: var(--btn-hover);
+}
+
+.events article{
+    display: grid;
+    grid-template-columns: 70px 1fr;
+    gap: 1.5rem;
+    align-items: start;
+}
+
+.event-date {
+    background-color: var(--color-primary);
+    color: var(--color-text-current);
+    padding: 0.5rem;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.event-date .day {
+    display: block;
+    font-size: 1.7rem;
+    font-weight: bold;
+    line-height: 1;
+}
+
+.event-date .month {
+    display: block;
+    font-size: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 0.12rem;
+}
+
+.event-desc {
+    max-width: 65ch;
+}
+
+#spotlights {
+    grid-template-columns: 1fr;
+}
+
+#spotlights .card-header h2 {
+    min-height: 3.7rem;
+}
+
+.weather-panel {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0.5rem;
+    background-color: var(--color-secondary);
+    color: var(--color-text-current);
+    border-radius: 10px;
+    padding: 1.2rem;
+}
+
+#weather-desc {
+    text-transform: capitalize;
+}
+
+.current-weather {
+    display: grid;
+    align-content: center;
+    gap: 0.5rem;
+}
+
+.current-weather p {
+    margin: 0;
+}
+
+#current-temp {
+    font-size: 2.5rem;
+}
+
+#forecast {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: .5rem;
+    text-align: center;
 }
