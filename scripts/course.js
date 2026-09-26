@@ -80,6 +80,8 @@ const courses = [
     
 ]
 
+const courseDetails = document.querySelector('dialog');
+
 function cards (courses){ // It has "courses" as a parameter so the other pasts of the function can reuse the complete array (such as the filter and reduce methods,
     // and the three buttons)   
     const container = document.getElementById('cards');
@@ -104,6 +106,12 @@ function cards (courses){ // It has "courses" as a parameter so the other pasts 
     document.getElementById('total-credits').textContent = `The total credits for courses listed above is ${totalCredits}`;
 
     container.innerHTML = text;
+    container.querySelectorAll('.card').forEach((cardElement, i) => {
+        cardElement.addEventListener('click', () => {
+            displayCourseDetails(courses[i]);
+        })
+    });
+
 }
 cards(courses);
 
@@ -123,3 +131,21 @@ wddButton.addEventListener('click', () => {
     const course = courses.filter(course => course.subject === "WDD");
     cards(course);
 });
+
+function displayCourseDetails(course) {
+    courseDetails.innerHTML = '';
+    courseDetails.innerHTML = `
+    <button id="closeModal">❌</button>
+    <h2>${course.subject} ${course.number}</h2>
+    <h3>${course.title}</h3>
+    <p><strong>Credits</strong>: ${course.credits}</p>
+    <p><strong>Certificate</strong>: ${course.certificate}</p>
+    <p>${course.description}</p>
+    <p><strong>Technologies</strong>: ${course.technology.join(', ')}</p>
+    `;
+    courseDetails.showModal();
+
+    closeModal.addEventListener("click", () => {
+        courseDetails.close();
+    });
+}
