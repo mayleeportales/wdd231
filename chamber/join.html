@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Join | Salvador Chamber of Commerce</title>
+    <meta name="description" content="Join the Salvador Chamber of Commerce today: fill out the membership application and compare the benefits of our four membership levels.">
+    <meta name="author" content="Maylee Portales Picazo">
+
+    <meta property="og:title" content="Join | Salvador Chamber of Commerce">
+    <meta property="og:description" content="Join the Salvador Chamber of Commerce today: fill out the membership application and compare the benefits of our four membership levels.">
+    <meta property="og:image" content="https://mayleeportales.github.io/wdd231/chamber/images/chamber-og.jpg">
+    <meta property="og:url" content="https://mayleeportales.github.io/wdd231/chamber/join.html">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet">
+
+    <!-- Favicon Link-->
+    <link rel="icon" href="chamber/favicon.ico">
+
+    <!-- CSS links-->
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/small.css">
+    <link rel="stylesheet" href="styles/larger.css">
+
+    <!--JS links-->
+    <script src="scripts/navigation.js" defer></script>
+    <script src="scripts/date.js" defer></script>
+    <script src="scripts/join.js" defer></script>
+</head>
+<body>
+    <header>
+        <img src="images/salvador-chamber.svg" alt="Salvador Chamber of Commerce" width="120" height="125">
+        <span class="site-name">Salvador Chamber of Commerce</span>
+        <button id="ham-btn" class="hamburger" aria-label="Menu"></button>
+    </header>
+
+    <nav id="nav-bar" class="navigation">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="discover.html">Discover</a></li>
+            <li><a href="directory.html">Directory</a></li>
+            <li class="current"><a href="join.html">Join</a></li>
+
+        </ul>
+    </nav>
+
+    <main>     
+
+        <h1>Membership Application</h1>
+
+        <div class="join-layout">            
+            <form action="thankyou.html" method="get">
+                <h2>Application Form</h2>
+                <label>First Name*
+                    <input type="text" name="first" title="Enter your first name" autocomplete="given-name" required>
+                </label>
+                <label>Last Name*
+                    <input type="text" name="last" title="Enter your last name" autocomplete="family-name" required>
+                </label>
+                <label>Organizational Title
+                    <input type="text" name="organizational" title="Your title at the organization. Minimum 7 characters, letters, hyphens and spaces only." autocomplete="organization-title" pattern="[A-Za-z\- ]{7,}">
+                </label>
+                <label>Email*
+                    <input type="email" name="email" title="Enter your email" autocomplete="email" placeholder="youremail@gmail.com" required>
+                </label>
+                <label>Mobile Phone*
+                    <input type="tel" name="phone" title="Enter your mobile phone" autocomplete="tel" placeholder="(XX) XXXXX-XXXX" required>
+                </label>
+                <label>Business Name*
+                    <input type="text" name="business-name" title="Enter your business name" autocomplete="organization" placeholder="ex.: Bel Cosmeticos" required>
+                </label>
+                <label>Membership Level*
+                    <select name="membership" title="Choose a membership level" required>
+                        <option value="">Select a membership level</option>
+                        <option value="np">NP Membership</option>
+                        <option value="bronze">Bronze Membership</option>
+                        <option value="silver">Silver Membership</option>
+                        <option value="gold">Gold Membership</option>
+                    </select>
+                </label>
+                <label>Description
+                    <textarea name="description" title="Enter your description" rows="5"></textarea>
+                </label>
+                <label>
+                    <input type="hidden" name="timestamp" id="timestamp">
+                </label>
+                <input class="submit-btn" type="submit" value="Join the Chamber">
+            </form>
+
+            <section class="membership">
+                <h2>Membership Levels</h2>
+
+                <div class="level-card">
+                    <h3>NP Membership</h3>
+                    <p>Free - for registered non-profit organizations</p>
+                    <button class="info-btn" data-level="np">Learn more</button>
+                </div>
+
+                <div class="level-card">
+                    <h3>Bronze Membership</h3>
+                    <p>R$ 300/year - for small business getting started</p>
+                    <button class="info-btn" data-level="bronze">Learn more</button>
+                </div>
+
+                <div class="level-card">
+                    <h3>Silver Membership</h3>
+                    <p>R$ 700/year - for growing businesses</p>
+                    <button class="info-btn" data-level="silver">Learn more</button>
+                </div>
+
+                <div class="level-card">
+                    <h3>Gold Membership</h3>
+                    <p>R$ 1.500/year - full visibility and priority access</p>
+                    <button class="info-btn" data-level="gold">Learn more</button>
+                </div>
+            </section>
+        </div>
+            
+        <dialog id="np-modal">
+            <button class="close-modal" aria-label="Close">&#10005;</button>
+            <h3>NP Membership</h3>
+            <p>Free - for registered non-profit organizations</p>
+            <ul>
+                <li>Listing in the online member directory</li>
+                <li>Monthly chamber newsletter</li>
+                <li>Access to free networking events</li>
+            </ul>
+        </dialog>
+
+        <dialog id="bronze-modal">
+            <button class="close-modal" aria-label="Close">&#10005;</button>
+            <h3>Bronze Membership</h3>
+            <p>R$ 300/year - for small business getting started</p>
+            <ul>
+                <li>Everything in NP Membership</li>
+                <li>20% discount on paid events</li>
+                <li>Access to business training workshops</li>
+            </ul>
+        </dialog>
+
+        <dialog id="silver-modal">
+            <button class="close-modal" aria-label="Close">&#10005;</button>
+            <h3>Silver Membership</h3>
+            <p>R$ 700/year - for growing businesses</p>
+            <ul>
+                <li>Everything in Bronze Membership</li>
+                <li>Rotating spotlight on the chamber home page</li>
+                <li>Banner placement in the monthly newsletter</li>
+            </ul>
+        </dialog>
+
+        <dialog id="gold-modal">
+            <button class="close-modal" aria-label="Close">&#10005;</button>
+            <h3>Gold Membership</h3>
+            <p>R$ 1.500/year - full visibility and priority access</p>
+            <ul>
+                <li>Everything in Silver Membership</li>
+                <li>Guaranteed spotlight on the home page</li>
+                <li>Booth at the annual Carnival Season Business Forum</li>
+                <li>One-on-one business consulting session</li>
+            </ul>
+        </dialog>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+          <div class="social">
+            <a href="https://www.facebook.com/" target="_blank"><img src="images/facebook.svg" alt="Facebook login page" width="16" height="16"></a>
+            <a href="https://www.linkedin.com/in/mayleepicazo" target="_blank"><img src="images/linkedin.svg" alt="Maylee Picazo's LinkedIn profile" width="16" height="16"></a>
+            <a href="https://github.com/mayleeportales" target="_blank"><img src="images/github.svg" alt="Maylee Picazo's GitHub profile" width="16" height="16"></a>        
+          </div>
+          <p>&copy;<span id="currentYear"></span> 💠 Maylee Picazo | WDD 231💠 Salvador, BA</p>
+          <address>
+            <p>465 Cabin Street, Salvador - BA, 40305-224</p>
+            <p>+55(71)99130-4422</p>
+            <p>ssachamberofcommerce@gmail.com</p>            
+          </address>
+          <p id="lastModified"></p>
+        </div>
+    </footer>    
+</body>
+</html>

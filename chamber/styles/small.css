@@ -9,7 +9,9 @@
     --color-card-header: #0B2545;
     --color-current: #e3cb89;
     --color-heading-transparency: rgba(11, 37, 69, 0.8);
+    --background-thank-message: #bed78b;
 
+    --color-check: #008000;
     --color-text-current: #fff;
     --color-text-btn: #fff;
     --color-text-heading: #fff;
@@ -401,4 +403,131 @@ address p {
     grid-template-columns: 1fr 1fr 1fr;
     gap: .5rem;
     text-align: center;
+}
+
+/************* JOIN PAGE **************/
+.join-layout {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 3rem;
+}
+
+.join-layout h2 {
+    margin-top: 0;
+}
+
+.membership h2 {
+    margin-bottom: 2.2rem;
+}
+
+form label {
+    display: block;
+    margin-bottom: 1rem;
+}
+
+form input,
+form select, 
+form textarea {
+    display: block;
+    width: 100%;
+}
+
+form input {
+    border-radius: 5px;
+}
+
+dialog {
+    border: 1px solid rgb(0 0 0 / 10%);
+    border-radius: .25rem;
+    padding: 1rem;
+    background-color: var(--color-text-current);
+    color: var(--color-primary);
+    box-shadow: 0 0 3rem #777;
+    width: 90%;
+    max-width: 600px;
+    max-height: 80vh;
+    overflow-y: auto;
+}
+
+dialog::backdrop {
+    background-color: rgb(0 0 0 / 50%);
+}
+
+.level-card {
+    background-color: var(--color-card);
+    padding: 10px;
+    margin-bottom: 1.5rem;
+    border-radius: 8px;
+    border: 1px solid var(--color-primary);
+}
+
+.info-btn {
+    margin-top: .8rem;
+    text-decoration: none;
+    font-size: 1rem;
+    padding: 0.8rem 1.5rem;
+    background-color: var(--color-current);
+    color: var(--color-primary);
+    cursor: pointer;
+    border-radius: 5px;
+    white-space: nowrap;
+}
+
+.info-btn:hover{
+    background-color: var(--color-accent);
+}
+
+.submit-btn {
+    font-size: 1.2rem;
+    padding: 1rem 1.5rem;
+    background-color: var(--color-primary);
+    color: var(--color-text-btn);
+    cursor: pointer;
+    border-radius: 5px;
+    white-space: nowrap;
+}
+
+.submit-btn:hover {
+    background-color: var(--btn-hover);
+}
+
+@keyframes FadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.level-card {
+    animation: FadeInUp 0.5s ease-out backwards;
+}
+
+.level-card:nth-child(2) {
+    animation-delay: 0s;
+}
+.level-card:nth-child(3) {
+    animation-delay: 0.1s;
+}
+.level-card:nth-child(4) {
+    animation-delay: 0.2s;
+}
+.level-card:nth-child(5) {
+    animation-delay: 0.3s;
+}
+
+/************* THANK YOU PAGE **************/
+.thank-message {
+    background-color: var(--background-thank-message);
+    padding: 2rem;
+    border-radius: 5px;
+    border: 1px solid var(--color-primary);
+}
+
+.check {
+    color: var(--color-check);
 }

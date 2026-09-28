@@ -54,6 +54,14 @@
     gap: 1rem;
     }
 
+    .join-layout {
+    grid-template-columns: 1fr 1fr;
+    }
+
+    .submit-btn {
+        width: auto;
+    }
+
     .footer-content {
         max-width: 900px;
         margin: 0 auto;
