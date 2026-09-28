@@ -453,13 +453,7 @@ dialog::backdrop {
     background-color: rgb(0 0 0 / 50%);
 }
 
-.level-card {
-    background-color: var(--color-card);
-    padding: 10px;
-    margin-bottom: 1.5rem;
-    border-radius: 8px;
-    border: 1px solid var(--color-primary);
-}
+
 
 .info-btn {
     margin-top: .8rem;
@@ -504,6 +498,11 @@ dialog::backdrop {
 }
 
 .level-card {
+    background-color: var(--color-card);
+    padding: 10px;
+    margin-bottom: 1.5rem;
+    border-radius: 8px;
+    border: 1px solid var(--color-primary);
     animation: FadeInUp 0.5s ease-out backwards;
 }
 
