@@ -67,3 +67,48 @@
         margin: 0 auto;
     }
 }
+
+@media only screen and (min-width: 641px) {
+    #discover-cards {
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas: 
+        "elev elev"
+        "pelo bonf"
+        "mode far"
+        "marc diq"
+        "port .";
+    }
+
+    #discover-cards img:hover {
+        opacity: 0.6;
+    }
+
+    .card-1 button {
+        align-self: center;
+        font-size: 1.2rem;
+        padding: 1.2rem 3rem;
+    }
+}
+
+@media only screen and (min-width: 1025px) {
+    #discover-cards {
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-areas:
+        "far far far"
+        "pelo bonf mode"
+        "marc diq port"
+        "elev . .";
+
+    }
+
+    .card-1 button {
+        align-self: auto;
+        font-size: .9rem;
+        padding: 1rem 1rem;
+    }
+    .card-5 button {
+        align-self: center;
+        font-size: 1.2rem;
+        padding: 1.2rem 3rem;
+    }
+}
