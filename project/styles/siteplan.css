@@ -1,0 +1,40 @@
+:root {
+    --background-color: #F4F7F6;
+    --color-header: #1F6F78;
+    --color-titles: #1F6F78;
+    --color-accent: #5BBF9E;
+    --background-titles: #fff;
+
+    --color-text: #2B2B2B;
+}
+
+body {
+    background-color: var(--background-color);
+    color: var(--color-text);
+    font-family: "Poppins", sans-serif;
+}
+
+h1, h2 {
+    font-family: "Open Sans", sans-serif;
+    color: var(--color-titles);
+}
+
+h2 {
+    border-left: 4px solid var(--color-accent);
+    border-radius: .5rem;
+    padding: .5rem;
+    background-color: var(--background-titles);
+}
+
+main {
+    display: grid;
+    gap: 1rem;
+    max-width: 70ch;
+    margin: 0 auto;
+}
+
+
+.wireframe img {
+    max-width: 900px;
+    width: 100%;
+}
